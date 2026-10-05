@@ -7,7 +7,7 @@ const Hero = () => {
       className="gutter" 
       style={{ 
         position: "relative", 
-        backgroundColor: "var(--c-page-bg)",
+        backgroundColor: "var(--c-white)",
         paddingBottom: "var(--section-gap)"
       }}
     >

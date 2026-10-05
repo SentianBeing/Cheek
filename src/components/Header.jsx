@@ -20,8 +20,8 @@ const Header = () => {
     alignItems: "center",
     justifyContent: "space-between",
     padding: "24px 40px",
-    backgroundColor: "var(--c-page-bg)",
-    color: "var(--c-nav-text)",
+    backgroundColor: "var(--c-white)",
+    color: "#000000",
   };
 
   const navItemStyle = {
