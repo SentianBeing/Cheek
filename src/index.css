@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Barriecito&family=Work+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --c-white: #ffffff;
+  --c-ivory: #fffff1;
+  --c-plum: #58032a;
+  --c-plum-70: #8a4f69;
+  --c-plum-12: rgba(88, 3, 42, 0.12);
+  --c-blush: #ffe0f5;
+  --c-red: #e1233c;
+  --c-on-photo: #fffff1;
+  --c-page-bg: #FFFCF5;
+  --c-announcement-bg: #FFFDEB;
+  --c-announcement-text: #B60058;
+  --c-nav-text: #780029;
+  --c-hero-text: #FFFDEB;
+
+  /* --- ADJUST HERO TEXT SIZE HERE --- */
+  --hero-text-size: 80px;
+  /* ---------------------------------- */
+
+  --f-head: "Barriecito", system-ui, sans-serif;
+  --f-label: "Work Sans", system-ui, sans-serif;
+  /* Fallback for Calder LC */
+  --f-body: "Work Sans", system-ui, sans-serif;
+
+  --gutter: 20px;
+  --radius: 16px;
+  --radius-pill: 999px;
+  --section-gap: 40px;
+  --max-w: none;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --gutter: 12px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--f-body);
+  color: var(--c-plum);
+  background-color: var(--c-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Typography Classes */
+.display {
+  font-family: var(--f-head);
+  font-size: 88px;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .display {
+    font-size: 48px;
+  }
+}
+
+.h2 {
+  font-family: var(--f-head);
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .h2 {
+    font-size: 34px;
+  }
+}
+
+.h3 {
+  font-family: var(--f-head);
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  .h3 {
+    font-size: 22px;
+  }
+}
+
+.statement {
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 768px) {
+  .statement {
+    font-size: 22px;
+  }
+}
+
+.label-lg {
+  font-family: var(--f-label);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .label-lg {
+    font-size: 14px;
+  }
+}
+
+.label {
+  font-family: var(--f-label);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .label {
+    font-size: 13px;
+  }
+}
+
+.label-sm {
+  font-family: var(--f-label);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .label-sm {
+    font-size: 11px;
+  }
+}
+
+.body {
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .body {
+    font-size: 14px;
+  }
+}
+
+.body-sm {
+  font-family: var(--f-body);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .body-sm {
+    font-size: 12px;
+  }
+}
+
+/* Layout Utilities */
+.gutter {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section-gap {
+  margin-top: var(--section-gap);
+  margin-bottom: var(--section-gap);
+}
+
+.radius {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.radius-pill {
+  border-radius: var(--radius-pill);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  transition: all 400ms ease;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.15);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  z-index: -1;
+  transition: all 400ms ease;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: var(--c-plum);
+  color: var(--c-ivory);
+}
+
+.btn-primary::before {
+  background-color: var(--c-blush);
+}
+
+.btn-primary:hover {
+  color: var(--c-plum);
+}
+
+.btn-on-photo {
+  background-color: var(--c-white);
+  color: var(--c-plum);
+}
+
+.btn-on-photo::before {
+  background-color: var(--c-plum);
+}
+
+.btn-on-photo:hover {
+  color: var(--c-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--c-plum);
+  border: 1px solid var(--c-plum);
+}
+
+.btn-outline::before {
+  background-color: var(--c-plum);
+}
+
+.btn-outline:hover {
+  color: var(--c-white);
+}
+
+.btn-hero {
+  background-color: var(--c-hero-text);
+  color: var(--c-nav-text);
+}
+
+.btn-hero::before {
+  background-color: var(--c-nav-text);
+}
+
+.btn-hero:hover {
+  color: var(--c-hero-text);
+}
